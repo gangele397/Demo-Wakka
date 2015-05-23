@@ -1,0 +1,12 @@
+<div class="container" ng-controller="SearchController">
+	<div class="input">
+		<input type="text" ng-model="search" />
+	</div>
+	<div class="suggestions" ng-if="suggestions != null">
+		<div ng-if="suggestions.length == 0">No suggestions found for {{search}}</div>
+		<div ng-repeat="suggestion in suggestions">{{suggestion}}</div>
+	</div>
+	<div class="buttons">
+		<input type="button" value="Search" ng-click="performSearch()" /> <span ng-show="error">{{error}}</span>
+	</div>
+</div>

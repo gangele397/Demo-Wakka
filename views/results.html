@@ -1,0 +1,16 @@
+<div ng-controller="ResultsController">
+	<div>showing results for {{query}}</div>
+	<div class="facets">
+		<div ng-repeat="facet in facets">
+			<span>{{facet}}</span>
+			<input type="button" value="Yes" ng-click="addFilter(facet)"/>
+			<input type="button" value="Yes" ng-click="removeFilter(facet)"/>
+		</div>
+	</div>
+	<div class="results">
+		<div ng-repeat="result in results" ng-click="showInfo(result)">
+			<span>Name:</span>
+			<span>{{result.name}}</span>
+		</div>
+	</div>
+</div>
