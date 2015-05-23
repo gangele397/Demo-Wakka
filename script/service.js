@@ -9,5 +9,5 @@ angular.module("randomApp")
 		getResults:{url:"/results/:term", method:"GET", isArray:true},
 		fetchFacets: {url:"/facets", method:"GET", isArray:true},
 		fetchInfo: {url:"/info/:id", method:"GET"}
-	})
+	});
 }]);

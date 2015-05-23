@@ -37,4 +37,5 @@ angular.module("randomApp")
 .controller("InfoController", ["$scope", "RandomService", "$state", function($scope, RandomService, $state) {
 	$scope.id = $state.params;
 	$scope.info = RandomService.fetchInfo({id:$scope.query});
-}])
+}]);
+

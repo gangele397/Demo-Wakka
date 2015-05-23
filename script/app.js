@@ -1,7 +1,8 @@
 /**
  * 
  */
-angular.module("randomApp", ["ui.router", "ngResource", "ngAnimate", "ui.bootstrap"])
+
+angular.module("randomApp", ["ui.router", "ngResource", /*"ngAnimate",*/ "ui.bootstrap"])
 .config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider){
 
 	$urlRouterProvider.otherwise("/search");
@@ -17,4 +18,4 @@ angular.module("randomApp", ["ui.router", "ngResource", "ngAnimate", "ui.bootstr
 		url: "/info/:id",
 		templateUrl: "views/info.html"
 	})
-}])
+}]);
