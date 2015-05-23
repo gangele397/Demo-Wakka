@@ -5,7 +5,7 @@
 angular.module("randomApp")
 .controller("SearchController", ["$scope", "RandomService", "$state", function($scope, RandomService, $state) {
 	$scope.search = "";
-	$scope.error = nulls;
+	$scope.error = null;
 	$scope.suggestions = null;
 	$scope.$watch("search", function(value) {
 		$scope.error = null;
@@ -21,11 +21,11 @@ angular.module("randomApp")
 	};
 }])
 .controller("ResultsController", ["$scope", "RandomService", "$state", function($scope, RandomService, $state) {
-	$scope.query = $state.params;
+	$scope.query = $state.params.query;
 	$scope.results = RandomService.getResults({query:$scope.query});
 	$scope.facets = RandomService.fetchFacets();
 	$scope.showInfo = function(result) {
-		
+		$state.go("info", {id:result.id});
 	};
 	$scope.addFilter = function(facet) {
 		
@@ -37,5 +37,17 @@ angular.module("randomApp")
 .controller("InfoController", ["$scope", "RandomService", "$state", function($scope, RandomService, $state) {
 	$scope.id = $state.params;
 	$scope.info = RandomService.fetchInfo({id:$scope.query});
-}]);
+}])
+.directive('ngEnter', function () {
+    return function (scope, element, attrs) {
+        element.bind("keydown keypress", function (event) {
+            if(event.which === 13) {
+                scope.$apply(function (){
+                    scope.$eval(attrs.ngEnter);
+                });
 
+                event.preventDefault();
+            }
+        });
+    };
+});

@@ -1,4 +1,4 @@
 {
-	name: "mindtickle",
-	description: "gamification"
+	"name": "mindtickle",
+	"description": "gamification"
 }

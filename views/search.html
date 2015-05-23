@@ -1,10 +1,10 @@
 <div class="container" ng-controller="SearchController">
 	<div class="input">
-		<input type="text" ng-model="search" />
+		<input type="text" ng-model="search" ng-enter="performSearch()"/>
 	</div>
 	<div class="suggestions" ng-if="suggestions != null">
-		<div ng-if="suggestions.length == 0">No suggestions found for {{search}}</div>
-		<div ng-repeat="suggestion in suggestions">{{suggestion}}</div>
+		<div ng-if="suggestions.length == 0 && suggestions.$resolved">No suggestions found for {{search}}</div>
+		<div ng-repeat="suggestion in suggestions" ng-click="search=suggestion;performSearch();">{{suggestion}}</div>
 	</div>
 	<div class="buttons">
 		<input type="button" value="Search" ng-click="performSearch()" /> <span ng-show="error">{{error}}</span>

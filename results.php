@@ -1,17 +1,22 @@
 [
 	{
-		name: "Mindtickle"
+		"id": 12,
+		"name": "Mindtickle"
 	},
 	{
-		name: "Amazon"
+		"id": 12,
+		"name": "Amazon"
 	},
 	{
-		name: "tcs"
+		"id": 12,
+		"name": "tcs"
 	},
 	{
-		name: "nifty"
+		"id": 12,
+		"name": "nifty"
 	},
 	{
-		name: "chandla"
-	},
+		"id": 12,
+		"name": "chandla"
+	}
 ]
