@@ -1,16 +1,60 @@
-<div ng-controller="ResultsController">
-	<div>showing results for {{query}}</div>
-	<div class="facets">
-		<div ng-repeat="facet in facets">
-			<span>{{facet}}</span>
-			<input type="button" value="Yes" ng-click="addFilter(facet)"/>
-			<input type="button" value="No" ng-click="removeFilter(facet)"/>
+<div class="container" ng-controller="ResultsController">
+    <hr>
+    <ol class="breadcrumb">
+    	<li><a href="#">Page name</a></li>
+		<li><a href="#">Search Results</a></li>
+		<li class="pull-right"><a href="" class="text-muted"><i class="fa fa-refresh"></i></a></li>
+	</ol>
+	<div class="facets accordion" style="float:right;margin-right:40px;">
+		<div ng-repeat="facet in results.facets">
+		<div class="accordionHeaders" data-amount="2" ng-click="ui[$index] = !ui[$index]">
+			&#x2605; {{facet}}
+		</div>
+			<div class="contentHolder" ng-show="ui[$index]">
+				<div class="accordionContent" ng-click="addFilter(facet)">
+					<span>&#9656;</span> Yes
+				</div>
+				<div class="accordionContent" ng-click="removeFilter(facet)">
+					<span>&#9656;</span> No
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="results">
-		<div ng-repeat="result in results" ng-click="showInfo(result)">
-			<span>Name:</span>
-			<span>{{result.name}}</span>
-		</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    		<div class="well search-result">
+        		<div class="input-group">
+        		<input type="text" class="form-control" placeholder="Search" ng-model="ui.search" ng-enter="performSearch()">
+			      <span class="input-group-btn">
+			        <button class="btn btn-info btn-lg" type="button" ng-click="performSearch();">
+                        <i class="glyphicon glyphicon-search"></i>
+                        Search
+                    </button>
+			      </span>
+			    </div>
+	<div class="suggestions" ng-if="suggestions != null">
+		<div ng-if="suggestions.length == 0 && suggestions.$resolved">No suggestions found for {{ui.search}}</div>
+		<div ng-repeat="suggestion in suggestions" ng-click="ui.search=suggestion;performSearch();">{{suggestion}}</div>
 	</div>
+        	</div>
+            <div class="well search-result" ng-repeat="result in results.list" ng-clickq="showInfo(result)">
+            	<div class="row">
+            		<a ui-sref="info({id:result.id})">
+                		<div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
+	                    	<img class="img-responsive" ng-src="{{result.logo}}" alt="" style="border: 1px solid #ccc;padding:2px;min-width:50px;min-height:10px;">
+                		</div>
+                		<div class="col-xs-6 col-sm-9 col-md-9 col-lg-10 title">
+	                    	<h3>{{result.name}}</h3>
+	                    	<p>{{result.article}}</p>
+                		</div>
+            		</a>
+            	</div>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-info  btn-block">
+                    <i class="glyphicon glyphicon-refresh"></i>Load more...
+                </button>
+            </div>
+		</div>
+    </div>
 </div>

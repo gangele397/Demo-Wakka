@@ -4,26 +4,45 @@
 
 angular.module("randomApp")
 .controller("SearchController", ["$scope", "RandomService", "$state", function($scope, RandomService, $state) {
-	$scope.search = "";
+	$scope.ui = {};
+	$scope.ui.search = "";
 	$scope.error = null;
 	$scope.suggestions = null;
-	$scope.$watch("search", function(value) {
+	$scope.$watch("ui.search", function(value) {
 		$scope.error = null;
 		if(value.length > 0)
 		$scope.suggestions = RandomService.getSuggestions({term:value});
 	});
 	$scope.performSearch = function() {
-		if($scope.search.length < 1) {
+		if($scope.ui.search.length < 1) {
 			$scope.error = "Search term can not be blank";
 			return;
 		}
-		$state.go("result", {query:$scope.search});
+		$state.go("result", {query:$scope.ui.search});
 	};
 }])
 .controller("ResultsController", ["$scope", "RandomService", "$state", function($scope, RandomService, $state) {
+	$scope.ui = {};
+	$scope.ui.search = "";
+	$scope.error = null;
+	$scope.suggestions = null;
+	$scope.$watch("ui.search", function(value) {
+		$scope.error = null;
+		if(value.length > 0)
+		$scope.suggestions = RandomService.getSuggestions({term:value});
+	});
+	$scope.performSearch = function() {
+		if($scope.ui.search.length < 1) {
+			$scope.error = "Search term can not be blank";
+			return;
+		}
+		$state.go("result", {query:$scope.ui.search});
+	};
+
 	$scope.query = $state.params.query;
-	$scope.results = RandomService.getResults({query:$scope.query});
-	$scope.facets = RandomService.fetchFacets();
+	if($scope.query) $scope.results = RandomService.getResults({query:$scope.query});
+	else $scope.results = null;
+
 	$scope.showInfo = function(result) {
 		$state.go("info", {id:result.id});
 	};

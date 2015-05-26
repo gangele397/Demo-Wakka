@@ -8,7 +8,8 @@ angular.module("randomApp", ["ui.router", "ngResource", /*"ngAnimate",*/ "ui.boo
 	$urlRouterProvider.otherwise("/search");
 	$stateProvider.state("search", {
 		url: "/search",
-		templateUrl: "views/search.html"
+		//templateUrl: "views/search.html"
+		templateUrl: "views/results.html"
 	})
 	.state("result", {
 		url: "/result/:query",
