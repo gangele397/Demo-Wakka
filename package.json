@@ -1,0 +1,19 @@
+{
+  "name": "jg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gangele397/Demo-Wakka.git"
+  },
+  "author": "hridayesh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gangele397/Demo-Wakka/issues"
+  },
+  "homepage": "https://github.com/gangele397/Demo-Wakka"
+}
