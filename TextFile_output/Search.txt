@@ -1,0 +1,20 @@
+when user search ,facets and company data(company name ,logo from local system logo directory,company Topic will be returned)
+
+
+
+################################
+facets and results array from PHP will be return 
+facest array :{business developement,hiring,firing} dynamic array may have so many
+
+Result :array of resultData class
+where   public class resultDataClass{
+  companyName
+  companyID
+  Topics[] 
+  
+}
+
+These topics we need to Show In search result DIV like in stack overflow its shows Java , VB tag? one button or icon type...
+When someone click on thse buttons we will open new page where call to Php function GetArticleForTopic($companyID,TopicID)
+
+this will return multiple article content array of content.
