@@ -7,6 +7,7 @@ class companyDataInfo{
 	var_dump($json);
 	$jsonArr = json_decode($json, TRUE);
 	echo "<pre>".print_r($jsonArr,true)."</pre>";
+	
 	$companyData = array();
 	foreach($jsonArr['hits']['hits'] as $k=>$ele){
 		$item=$ele['fields'];
