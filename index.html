@@ -4,6 +4,9 @@
 <title>Random App</title>
 
 <link href="css/facets.css" media="all" rel="stylesheet" />
+<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="all" rel="stylesheet" />
+<link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" media="all" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 
 <script type="text/javascript" src="bower_components/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
@@ -20,8 +23,10 @@
 <script type="text/javascript" src="script/service.js"></script>
 </head>
 <body>
-	<div class="header">
-		<div class="logo">Logo</div>
+	<div class="header container">
+		<div class="logo">
+			<img src="logo/download.png" alt="logo"/>
+		</div>
 	</div>
 	<div ui-view>Loading...</div>
 </body>

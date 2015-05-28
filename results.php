@@ -3,27 +3,32 @@
 	{
 		"id": 12,
 		"article":"some details whihc can go to multiple lines to look good, nothing else matters",
-		"name": "Insideview"
+		"name": "Insideview",
+		"logo":"http://lorempixel.com/400/200/sports/1/"
 	},
 	{
 		"id": 12,
 		"article":"some details whihc can go to multiple lines to look good, nothing else matters",
-		"name": "Amazon"
+		"name": "Amazon",
+		"logo":"http://lorempixel.com/400/200/sports/2/"
 	},
 	{
 		"id": 12,
 		"article":"some details whihc can go to multiple lines to look good, nothing else matters",
-		"name": "tcs"
+		"name": "tcs",
+		"logo":"http://lorempixel.com/400/200/sports/3/"
 	},
 	{
 		"id": 12,
 		"article":"some details whihc can go to multiple lines to look good, nothing else matters",
-		"name": "nifty"
+		"name": "nifty",
+		"logo":"http://lorempixel.com/400/200/sports/4/"
 	},
 	{
 		"id": 12,
 		"article":"some details whihc can go to multiple lines to look good, nothing else matters",
-		"name": "chandla"
+		"name": "chandla",
+		"logo":"http://lorempixel.com/400/200/sports/5/"
 	}
 ]
 }
