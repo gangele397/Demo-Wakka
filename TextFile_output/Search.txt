@@ -1,20 +1,44 @@
-when user search ,facets and company data(company name ,logo from local system logo directory,company Topic will be returned)
-
-
-
-################################
-facets and results array from PHP will be return 
-facest array :{business developement,hiring,firing} dynamic array may have so many
-
-Result :array of resultData class
-where   public class resultDataClass{
-  companyName
-  companyID
-  Topics[] 
-  
+{"facets": ["mindtickle", "ola", "jeetu"],
+"list":[
+	{
+		"id": 12,
+		"TopTopics":["topic1", "topic1", "topic1"],
+		
+		"SemanticTags":["topic1", "topic1", "topic1"],
+		"name": "Insideview",
+		"logo":"http://lorempixel.com/400/200/sports/1/"
+	},
+	{
+		"id": 12,
+		"TopTopics":["topic1", "topic1", "topic1"],
+		
+		"SemanticTags":["topic1", "topic1", "topic1"],
+		"name": "Insideview",
+		"logo":"http://lorempixel.com/400/200/sports/1/"
+	},
+	{
+		"id": 12,
+		"TopTopics":["topic1", "topic1", "topic1"],
+		
+		"SemanticTags":["topic1", "topic1", "topic1"],
+		"name": "Insideview",
+		"logo":"http://lorempixel.com/400/200/sports/1/"
+	},
+	{
+		"id": 12,
+		"TopTopics":["topic1", "topic1", "topic1"],
+		
+		"SemanticTags":["topic1", "topic1", "topic1"],
+		"name": "Insideview",
+		"logo":"http://lorempixel.com/400/200/sports/1/"
+	},
+	{
+		"id": 12,
+		"TopTopics":["topic1", "topic1", "topic1"],
+		
+		"SemanticTags":["topic1", "topic1", "topic1"],
+		"name": "Insideview",
+		"logo":"http://lorempixel.com/400/200/sports/1/"
+	}
+]
 }
-
-These topics we need to Show In search result DIV like in stack overflow its shows Java , VB tag? one button or icon type...
-When someone click on thse buttons we will open new page where call to Php function GetArticleForTopic($companyID,TopicID)
-
-this will return multiple article content array of content.

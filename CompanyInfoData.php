@@ -25,6 +25,7 @@ class companyDataInfo{
 	array_push($companyData,$item['employees'][0]);
 		
 	echo "<pre>".print_r($companyData)."</pre>";
+	
 		
 	}
 }
