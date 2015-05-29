@@ -12,7 +12,7 @@ angular.module("randomApp", ["ui.router", "ngResource", /*"ngAnimate",*/ "ui.boo
 		templateUrl: "views/results.html"
 	})
 	.state("result", {
-		url: "/result/:query",
+		url: "/result/:name?idType",
 		templateUrl: "views/results.html"
 	})
 	.state("info", {

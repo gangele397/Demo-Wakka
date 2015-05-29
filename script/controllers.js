@@ -18,7 +18,7 @@ angular.module("randomApp")
 			$scope.error = "Search term can not be blank";
 			return;
 		}
-		$state.go("result", {query:$scope.ui.search});
+		$state.go("result", {name:$scope.ui.search});
 	};
 }])
 .controller("ResultsController", ["$scope", "RandomService", "$state", function($scope, RandomService, $state) {
@@ -36,11 +36,14 @@ angular.module("randomApp")
 			$scope.error = "Search term can not be blank";
 			return;
 		}
-		$state.go("result", {query:$scope.ui.search});
+		$state.go("result", {name:$scope.ui.search});
 	};
-
+	$scope.suggestedSearch = function(suggestion) {
+		$state.go("result", suggestion);
+	};
 	$scope.query = $state.params.query;
-	if($scope.query) $scope.results = RandomService.getResults({query:$scope.query});
+	//$scope.type = $state.params.idType;
+	if($scope.query) $scope.results = RandomService.getResults($state.params);
 	else $scope.results = null;
 
 	$scope.showInfo = function(result) {

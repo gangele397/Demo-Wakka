@@ -34,7 +34,9 @@
 			    </div>
 	<div class="suggestions" ng-if="suggestions != null">
 		<div ng-if="suggestions.length == 0 && suggestions.$resolved">No suggestions found for {{ui.search}}</div>
-		<div ng-repeat="suggestion in suggestions" ng-click="ui.search=suggestion;performSearch();">{{suggestion}}</div>
+		<div ng-repeat="suggestion in suggestions" ng-click="suggestedSearch(suggestion);">
+			{{suggestion.name}}
+		</div>
 	</div>
         	</div>
             <div class="well search-result" ng-repeat="result in results.list" ng-clickq="showInfo(result)">
