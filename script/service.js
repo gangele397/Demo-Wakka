@@ -6,7 +6,7 @@ angular.module("randomApp")
 .service("RandomService", ["$resource", function($resource) {
 	return $resource("/", {}, {
 
-		getSuggestions: {url:"/suggestios.php", method:"GET", isArray:true},
+		getSuggestions: {url:"/suggestions.php", method:"GET", isArray:true},
 		getResults:{url:"/php_files/company_name.php", method:"GET"},
 		fetchFacets: {url:"/facets.php", method:"GET", isArray:true},
 		fetchInfo: {url:"/info.php", method:"GET"},
