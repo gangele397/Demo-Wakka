@@ -7,7 +7,7 @@ angular.module("randomApp")
 	return $resource("/", {}, {
 
 		getSuggestions: {url:"/suggestios.php", method:"GET", isArray:true},
-		getResults:{url:"/TextFile_output/Search.txt", method:"GET"},
+		getResults:{url:"/php_files/company_name.php", method:"GET"},
 		fetchFacets: {url:"/facets.php", method:"GET", isArray:true},
 		fetchInfo: {url:"/info.php", method:"GET"},
 		fetchTopic: {url:"/php_files/SearchArticleWithCompanyIDandTopic.php", method:"GET"}
