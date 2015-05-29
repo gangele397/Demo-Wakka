@@ -7,9 +7,10 @@ angular.module("randomApp")
 	return $resource("/", {}, {
 
 		getSuggestions: {url:"/suggestios.php", method:"GET", isArray:true},
-		getResults:{url:"/results.php", method:"GET"},
+		getResults:{url:"/TextFile_output/Search.txt", method:"GET"},
 		fetchFacets: {url:"/facets.php", method:"GET", isArray:true},
-		fetchInfo: {url:"/info.php", method:"GET"}
+		fetchInfo: {url:"/TextFile_output/info.txt", method:"GET"},
+		fetchTopic: {url:"/info.php", method:"GET"}
 /*
 		getSuggestions: {url:"/suggestios/:term", method:"GET", isArray:true},
 		getResults:{url:"/results/:term", method:"GET", isArray:true},

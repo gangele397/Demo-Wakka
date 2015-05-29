@@ -54,8 +54,12 @@ angular.module("randomApp")
 	};
 }])
 .controller("InfoController", ["$scope", "RandomService", "$state", function($scope, RandomService, $state) {
-	$scope.id = $state.params;
-	$scope.info = RandomService.fetchInfo({id:$scope.query});
+	//$scope.id = $state.params;
+	$scope.info = RandomService.fetchInfo($state.params);
+}])
+.controller("TopicController", ["$scope", "RandomService", "$state", function($scope, RandomService, $state) {
+	//$scope.id = $state.params;
+	$scope.info = RandomService.fetchTopic($state.params);
 }])
 .directive('ngEnter', function () {
     return function (scope, element, attrs) {

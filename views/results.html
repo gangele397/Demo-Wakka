@@ -39,14 +39,16 @@
         	</div>
             <div class="well search-result" ng-repeat="result in results.list" ng-clickq="showInfo(result)">
             	<div class="row">
-            		<a ui-sref="info({id:result.id})">
-                		<div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
-	                    	<img class="img-responsive" ng-src="{{result.logo}}" alt="" style="border: 1px solid #ccc;padding:2px;min-width:50px;min-height:10px;">
+            		<a>
+                		<div class="col-xs-6 col-sm-3 col-md-3 col-lg-2"  ui-sref="info({id:result.id})">
+	                    	<img style="cursor:pointer;" class="img-responsive" ng-src="{{result.logo}}" alt="" style="border: 1px solid #ccc;padding:2px;min-width:50px;min-height:10px;">
                 		</div>
                 		<div class="col-xs-6 col-sm-9 col-md-9 col-lg-10 title">
-	                    	<h3>{{result.name}}</h3>
-	                    	<p>{{result.article}}</p>
+	                    	<h3  ui-sref="info({id:result.id})" style="cursor:pointer;">{{result.name}}</h3>
+	                    	<!-- p>{{result.article}}</p> -->
                 		</div>
+                		<div class="bubble" ng-repeat="bubble in result.TopTopics" ui-sref="topic({id:result.id,topic:bubble})">{{bubble}}</div>
+                		<div class="bubble" ng-repeat="bubble in result.SemanticTags" ui-sref="topic({id:result.id,topic:bubble})">{{bubble}}</div>
             		</a>
             	</div>
             </div>

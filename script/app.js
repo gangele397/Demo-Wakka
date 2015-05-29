@@ -19,4 +19,8 @@ angular.module("randomApp", ["ui.router", "ngResource", /*"ngAnimate",*/ "ui.boo
 		url: "/info/:id",
 		templateUrl: "views/info.html"
 	})
+	.state("topic", {
+		url: "/topic/:id/:topic",
+		templateUrl: "views/topic.html"
+	})
 }]);

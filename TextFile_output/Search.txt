@@ -2,41 +2,36 @@
 "list":[
 	{
 		"id": 12,
-		"TopTopics":["topic1", "topic1", "topic1"],
-		
-		"SemanticTags":["topic1", "topic1", "topic1"],
+		"TopTopics":["topic1", "topic2", "topic3"],
+		"SemanticTags":["topic4", "topic5", "topic6"],
 		"name": "Insideview",
 		"logo":"http://lorempixel.com/400/200/sports/1/"
 	},
 	{
 		"id": 12,
-		"TopTopics":["topic1", "topic1", "topic1"],
-		
-		"SemanticTags":["topic1", "topic1", "topic1"],
+		"TopTopics":["topic1", "topic2", "topic3"],
+		"SemanticTags":["topic4", "topic5", "topic6"],
 		"name": "Insideview",
 		"logo":"http://lorempixel.com/400/200/sports/1/"
 	},
 	{
 		"id": 12,
-		"TopTopics":["topic1", "topic1", "topic1"],
-		
-		"SemanticTags":["topic1", "topic1", "topic1"],
+		"TopTopics":["topic1", "topic2", "topic3"],
+		"SemanticTags":["topic4", "topic5", "topic6"],
 		"name": "Insideview",
 		"logo":"http://lorempixel.com/400/200/sports/1/"
 	},
 	{
 		"id": 12,
-		"TopTopics":["topic1", "topic1", "topic1"],
-		
-		"SemanticTags":["topic1", "topic1", "topic1"],
+		"TopTopics":["topic1", "topic2", "topic3"],
+		"SemanticTags":["topic4", "topic5", "topic6"],
 		"name": "Insideview",
 		"logo":"http://lorempixel.com/400/200/sports/1/"
 	},
 	{
 		"id": 12,
-		"TopTopics":["topic1", "topic1", "topic1"],
-		
-		"SemanticTags":["topic1", "topic1", "topic1"],
+		"TopTopics":["topic1", "topic2", "topic3"],
+		"SemanticTags":["topic4", "topic5", "topic6"],
 		"name": "Insideview",
 		"logo":"http://lorempixel.com/400/200/sports/1/"
 	}
