@@ -27,7 +27,7 @@ error_reporting(~E_ALL );
 		
 	}
 }
-	$companyData= getCompanyInfodata("726263");
+	$companyData= getCompanyInfodata($_GET["id"]);
 	echo $jsonformat=json_encode($companyData);
 	//foreach($companyData as $x => $x_value) {
 	//	echo $x."=".$x_value;

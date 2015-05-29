@@ -23,7 +23,7 @@ error_reporting(~E_ALL );
 	
 		
 	}
-	$articleData= getArticleData("810835","iphone");
+	$articleData= getArticleData($_GET["id"], $_GET["topic"]);
 	echo $jsonformat=json_encode($articleData);
 	//foreach($articleData as $x => $x_value) {
 	//	echo $x."=".$x_value;

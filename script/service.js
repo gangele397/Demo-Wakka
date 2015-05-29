@@ -9,8 +9,8 @@ angular.module("randomApp")
 		getSuggestions: {url:"/suggestios.php", method:"GET", isArray:true},
 		getResults:{url:"/TextFile_output/Search.txt", method:"GET"},
 		fetchFacets: {url:"/facets.php", method:"GET", isArray:true},
-		fetchInfo: {url:"/TextFile_output/info.txt", method:"GET"},
-		fetchTopic: {url:"/info.php", method:"GET"}
+		fetchInfo: {url:"/info.php", method:"GET"},
+		fetchTopic: {url:"/php_files/SearchArticleWithCompanyIDandTopic.php", method:"GET"}
 /*
 		getSuggestions: {url:"/suggestios/:term", method:"GET", isArray:true},
 		getResults:{url:"/results/:term", method:"GET", isArray:true},
